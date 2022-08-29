@@ -1,12 +1,49 @@
 h1 {
-    color: green;
-    font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
+.column {
+  display: inline-block;
+  width: 48%;
+}
+
+.col1 {
+  background-color: red;
+}
+
+.col2 {
+  background-color: pink;
+}
+
+.title {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.col1 h1 {
+  color: white;
+}
+
+#one {
+  border: 5px solid black;
+}
+
+.col1 img {
+  display: none;
+}
+
+
+
