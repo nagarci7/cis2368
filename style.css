@@ -45,5 +45,20 @@ img {
   display: none;
 }
 
+/**HERO SECTION**/
+.hero {
+  height: 100vh;
+  /*background-image: url("background.jpg");*/
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url("background1.jpg") no-repeat cover;
+  position: relative;
+}
 
-
+.intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
