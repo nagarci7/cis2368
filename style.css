@@ -9,6 +9,7 @@ p {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .column {
@@ -45,14 +46,17 @@ img {
   display: none;
 }
 
+section {
+  margin-bottom: 40px;
+}
+
 /**HERO SECTION**/
 .hero {
   height: 100vh;
-  /*background-image: url("background.jpg");*/
-  background-color: yellow;
+  background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background: url("background1.jpg") no-repeat cover;
+
   position: relative;
 }
 
@@ -61,4 +65,32 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/**ABOUT SECTION**/
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: auto;
+}
+
+.col-30 {
+  width: 29%;
+}
+
+.col-70 {
+  width: 69%;
+}
+
+.content {
+  padding-left: 20px;
+  padding-top: 40px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 767px) {
+  .column {
+    display: block;
+    width: 100%;
+  }
 }
