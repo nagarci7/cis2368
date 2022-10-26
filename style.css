@@ -1,120 +1,105 @@
-h1 {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-}
+@-webkit-keyframes roll {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
 
-.headline {
-  font-size: 60px;
-}
-
-p {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.column {
-  display: inline-block;
-  width: 48%;
-}
-
-.col1 {
-  background-color: red;
-}
-
-.col2 {
-  background-color: pink;
-}
-
-.title {
-  font-size: 35px;
-  text-transform: uppercase;
-}
-
-.title {
-  font-size: 45px;
-}
-
-.col1 h1 {
-  color: white;
-}
-
-#one {
-  border: 5px solid black;
-}
-
-.col1 img {
-  display: none;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-/**HERO SECTION**/
-.hero {
-  height: 100vh;
-  background-image: url("background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  position: relative;
-}
-
-.intro {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/**ABOUT SECTION**/
-.container {
-  max-width: 1200px;
-  display: block;
-  margin: auto;
-}
-
-.col-30 {
-  width: 29%;
-}
-
-.col-70 {
-  width: 69%;
-}
-
-.content {
-  padding-left: 20px;
-  padding-top: 40px;
-  vertical-align: top;
-}
-
-@media screen and (max-width: 767px) {
-  .column {
-    display: block;
-    width: 100%;
+  to {
+    -webkit-transform: rotate(360deg)
   }
 }
 
-.logo {
-  width: 35%;
-  display: block;
+@-moz-keyframes roll {
+  from {
+    -moz-transform: rotate(0deg)
+  }
+
+  to {
+    -moz-transform: rotate(360deg)
+  }
 }
 
-.no-list, .nav-items {
-  list-style: none;
+@keyframes roll {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes stretch {
+  0% {
+    opacity: 0.2;
+    background-color: green;
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    /* transform: scale(2.0); */
+    background-color: red;
+  }
+}
+
+body.roll {
+  -moz-animation-name: roll;
+  -moz-animation-duration: 4s;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-name: roll;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+}
+
+html,
+body,
+div,
+iframe {
+  margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-.nav-items li {
-  display: inline-block;
-  width: 100px;
+body {
+  cursor: none;
+  height: 120vh;
+  background: #171717;
 }
 
-.nav-items li:hover {
-  background-color: yellow;
-  cursor: pointer;
+.container {
+  display: block;
+  max-width: 900px;
+  margin: auto;
 }
+
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+.small {
+  width: 6px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.big {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 20rem;
+  animation-name: stretch;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
